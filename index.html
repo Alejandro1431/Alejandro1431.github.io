@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#121514" id="meta-theme">
+  <meta name="description" content="Automatización y análisis de datos en el sector financiero: Python, SQL, Databricks y Power BI. Portafolio de Mario Alejandro Rebellón.">
+  <title>Mario Rebellón | Datos y automatización</title>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Mario Rebellón | Datos y automatización">
+  <meta property="og:description" content="Portafolio de datos: automatización de procesos en banca con Python, SQL y ETL, y proyectos de ingeniería de datos.">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Aplica el tema guardado antes del primer pintado (evita el destello blanco). -->
+  <script>try{var t=localStorage.getItem('portfolio-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Manrope:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <header class="folio-header">
+    <a class="folio-wordmark" href="#inicio" aria-label="Inicio">
+      <span>MARIO REBELLÓN</span><b>/</b><small>DATOS Y AUTOMATIZACIÓN</small>
+    </a>
+    <nav class="folio-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#stack">Stack</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="folio-controls">
+      <button class="folio-theme" id="theme-toggle" type="button" aria-label="Cambiar de tema" aria-pressed="false"><span aria-hidden="true">◐</span></button>
+      <button class="folio-menu" id="menu-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PORTADA -->
+    <section class="folio-hero page-wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="folio-hero-grid">
+        <div class="folio-title-block">
+          <h1 id="hero-title">Datos y automatización<br><em>en banca.</em></h1>
+
+          <p class="folio-intro">Soy <b>Mario Alejandro Rebellón</b>. Llevo desde 2022 en el sector financiero, y desde 2023 mi trabajo consiste en quitarle lo manual a los procesos que dependen del dato: conciliaciones, informes y reportes regulatorios con Python, SQL y ETL. Mi siguiente paso es la ingeniería de datos: orquestación, modelado y nube.</p>
+
+          <div class="folio-actions">
+            <a class="folio-link" href="#proyectos">Ver proyectos</a>
+            <a class="folio-link folio-link-quiet" href="cv/CV-Mario-Rebellon-2026.pdf" target="_blank" rel="noopener">Descargar CV</a>
+          </div>
+
+          <ul class="folio-chips" aria-label="Stack principal">
+            <li>Python</li><li>SQL</li><li>DuckDB</li><li>Databricks</li><li>Power BI</li><li>Git</li>
+          </ul>
+
+          <dl class="folio-stats">
+            <div><dt>Experiencia</dt><dd>4 años en banca</dd></div>
+            <div><dt>Ubicación</dt><dd>Colombia</dd></div>
+            <div><dt>Disponibilidad</dt><dd>Remoto o híbrido</dd></div>
+          </dl>
+        </div>
+
+        <aside class="folio-note" aria-label="Flujo de referencia">
+          <div class="folio-note-top"><span>FLUJO DE REFERENCIA</span></div>
+
+          <svg class="folio-flow" viewBox="0 0 520 372" role="img" aria-label="Diagrama: orígenes de datos, orquestación, almacenamiento, transformación y consumo">
+            <g>
+              <g class="flow-node">
+                <rect x="8" y="26" width="160" height="50" rx="2"></rect>
+                <text x="88" y="49">API REST</text>
+                <text class="flow-sub" x="88" y="64">datos abiertos</text>
+              </g>
+              <g class="flow-node">
+                <rect x="180" y="26" width="160" height="50" rx="2"></rect>
+                <text x="260" y="49">EXCEL Y CSV</text>
+                <text class="flow-sub" x="260" y="64">archivos</text>
+              </g>
+              <g class="flow-node">
+                <rect x="352" y="26" width="160" height="50" rx="2"></rect>
+                <text x="432" y="49">SQL</text>
+                <text class="flow-sub" x="432" y="64">Databricks</text>
+              </g>
+            </g>
+
+            <g class="flow-wires">
+              <path d="M88 76 V104 H260"></path>
+              <path d="M432 76 V104 H260"></path>
+              <path d="M260 76 V104"></path>
+              <path class="flow-pulse" d="M260 104 V128"></path>
+              <path d="M260 174 V220"></path>
+              <path d="M260 266 V312"></path>
+            </g>
+
+            <g class="flow-node flow-node-wide">
+              <rect x="8" y="128" width="504" height="46" rx="2"></rect>
+              <text x="24" y="147">ORQUESTACIÓN</text>
+              <text class="flow-sub" x="24" y="163">Prefect, dependencias, reintentos</text>
+              <text class="flow-tag" x="496" y="157" text-anchor="end">01</text>
+            </g>
+
+            <g class="flow-node flow-node-wide">
+              <rect x="8" y="220" width="504" height="46" rx="2"></rect>
+              <text x="24" y="239">ALMACENAMIENTO</text>
+              <text class="flow-sub" x="24" y="255">Parquet en disco o en S3, DuckDB</text>
+              <text class="flow-tag" x="496" y="249" text-anchor="end">02</text>
+            </g>
+
+            <g class="flow-node flow-node-wide flow-accent">
+              <rect x="8" y="312" width="504" height="46" rx="2"></rect>
+              <text x="24" y="331">TRANSFORMACIÓN Y CONSUMO</text>
+              <text class="flow-sub" x="24" y="347">SQL y dbt, pruebas, Power BI</text>
+              <text class="flow-tag" x="496" y="341" text-anchor="end">03</text>
+            </g>
+          </svg>
+
+          <p class="folio-note-foot">Así paso un dato de la fuente al informe.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="folio-archive page-wrap" id="proyectos" aria-labelledby="archive-title">
+      <div class="folio-section-label"><span>ARCHIVO</span><span>Sin datos de clientes</span></div>
+      <div class="folio-archive-heading">
+        <h2 id="archive-title">Proyectos</h2>
+      </div>
+
+      <!-- Los tres primeros puestos van reservados y vacíos. Para ocupar uno:
+           copiar la tarjeta de abajo, pegarla aquí y quitar el hueco
+           correspondiente de .folio-reserved. -->
+      <div class="folio-reserved" aria-label="Puestos reservados">
+        <article class="folio-slot">
+          <span class="folio-slot-index">01</span>
+          <span class="folio-slot-state">Reservado</span>
+        </article>
+        <article class="folio-slot">
+          <span class="folio-slot-index">02</span>
+          <span class="folio-slot-state">Reservado</span>
+        </article>
+        <article class="folio-slot">
+          <span class="folio-slot-index">03</span>
+          <span class="folio-slot-state">Reservado</span>
+        </article>
+      </div>
+
+      <div class="folio-cases">
+        <article class="folio-case folio-case-featured folio-case-public">
+          <header class="folio-case-head">
+            <span class="folio-case-index">04</span>
+            <span class="folio-case-state">Código abierto</span>
+          </header>
+          <h3>Pipeline ELT de movilización financiera</h3>
+          <p class="folio-case-summary">Pipeline sobre datos abiertos de la Superintendencia Financiera y de Findeter. Tres fuentes descargadas por API, el crudo en Parquet que puede vivir en disco o en un bucket S3, y un modelo dimensional documentado y probado. Corre entero en 40 segundos; en carga incremental mueve 93% menos datos.</p>
+
+          <ul class="folio-stack" aria-label="Stack del proyecto">
+            <li>Python</li><li>SQL</li><li>DuckDB</li><li>dbt</li><li>Prefect</li><li>S3</li><li>Parquet</li><li>pytest</li><li>GitHub Actions</li>
+          </ul>
+
+          <div class="folio-case-flow" aria-label="Recorrido de los datos">
+            <span>API Socrata</span><i aria-hidden="true">→</i><span>Parquet crudo</span><i aria-hidden="true">→</i><span>Staging en DuckDB</span><i aria-hidden="true">→</i><span>Modelo dimensional</span><i aria-hidden="true">→</i><span>Calidad</span>
+          </div>
+
+          <p class="folio-case-note"><span>Hallazgo</span> Una prueba del modelo dimensional falló porque di por hecho que cada entidad tenía un solo tipo. Investigando apareció DECEVAL, reclasificado de administrador de bonos a fintech en diciembre de 2025. El modelo ahora conserva las dos versiones con sus fechas, en vez de atribuir en silencio nueve meses de historia al tipo nuevo.</p>
+
+          <dl class="folio-case-metrics">
+            <div><dt>Fuentes</dt><dd>3</dd></div>
+            <div><dt>Filas cargadas</dt><dd>194.832</dd></div>
+            <div><dt>Modelos de dbt</dt><dd>6</dd></div>
+            <div><dt>Pruebas</dt><dd>117</dd></div>
+          </dl>
+
+          <footer class="folio-case-foot">
+            <a class="folio-link" href="https://github.com/Alejandro1431/pipeline-movilizacion-financiera" target="_blank" rel="noopener">Repositorio <span aria-hidden="true">↗</span></a>
+            <a class="folio-link folio-link-quiet" href="https://github.com/Alejandro1431/pipeline-movilizacion-financiera/blob/main/docs/caso-de-estudio.md" target="_blank" rel="noopener">Caso de estudio <span aria-hidden="true">↗</span></a>
+            <a class="folio-link folio-link-quiet" href="https://alejandro1431.github.io/pipeline-movilizacion-financiera/" target="_blank" rel="noopener">Documentación de datos <span aria-hidden="true">↗</span></a>
+          </footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section class="folio-stack-section page-wrap" id="stack" aria-labelledby="stack-title">
+      <div class="folio-section-label"><span>HERRAMIENTAS</span><span>Lo que uso hoy</span></div>
+      <div class="folio-archive-heading">
+        <h2 id="stack-title">Stack</h2>
+      </div>
+
+      <div class="folio-stack-grid">
+        <article><h3>Lenguajes</h3><ul><li>Python</li><li>SQL</li></ul></article>
+        <article><h3>Ingeniería de datos</h3><ul><li>DuckDB</li><li>Databricks (SQL)</li><li>Parquet</li><li>ETL</li><li>Carga incremental</li></ul></article>
+        <article><h3>Modelado</h3><ul><li>dbt</li><li>Modelo dimensional</li><li>Esquema en estrella</li></ul></article>
+        <article><h3>Calidad de datos</h3><ul><li>pytest</li><li>Pruebas de dbt</li><li>Reglas de validación</li></ul></article>
+        <article><h3>Versiones e integración</h3><ul><li>Git</li><li>GitHub Actions</li></ul></article>
+        <article><h3>Orquestación</h3><ul><li>Prefect</li><li>Grafo de tareas</li><li>Reintentos</li></ul></article>
+        <article><h3>Nube</h3><ul><li>S3 compatible</li><li>Almacenamiento de objetos</li><li>DuckDB httpfs</li></ul></article>
+        <article><h3>Procesamiento</h3><ul><li>Pandas</li><li>OpenPyXL</li></ul></article>
+        <article><h3>BI y reportes</h3><ul><li>Power BI</li><li>Report Builder</li><li>BI Publisher</li></ul></article>
+        <article><h3>Automatización</h3><ul><li>Power Automate</li><li>FactorBOT</li><li>Excel avanzado</li></ul></article>
+        <article><h3>Sistemas financieros</h3><ul><li>SAP</li><li>Flexcube</li><li>SIIF</li><li>Siebel</li></ul></article>
+        <article><h3>Reportes regulatorios</h3><ul><li>Superfinanciera</li><li>BanRep</li><li>Formatos 414 y 466</li></ul></article>
+      </div>
+    </section>
+
+    <!-- PERFIL -->
+    <section class="folio-profile page-wrap" id="perfil" aria-labelledby="profile-title">
+      <div class="folio-section-label"><span>PERFIL</span><span>Actualizado en octubre de 2026</span></div>
+      <div class="folio-profile-grid">
+        <div>
+          <h2 id="profile-title">Perfil</h2>
+          <p class="folio-profile-bio">Entré al sector financiero por el lado contable, no por el técnico: facturación, cuadre y conciliación de cuentas. Ahí aprendí de dónde salen los descuadres y por qué un reporte regulatorio no admite un dato a medias. Desde 2023 trabajo en automatizar esos procesos con Python, SQL y ETL.</p>
+          <p class="folio-profile-bio">Estudio <b>Ingeniería de sistemas</b> (UNAD, séptimo semestre) y <b>Contaduría pública</b> (UNAD, quinto semestre). Esa mezcla es la que quiero aprovechar: entiendo el negocio financiero y además puedo escribirlo en código.</p>
+          <p class="folio-profile-bio">Estoy construyendo portafolio en ingeniería de datos, así que busco roles junior donde seguir creciendo en pipelines, modelado y nube.</p>
+          <div class="folio-actions">
+            <a class="folio-link" href="https://github.com/Alejandro1431" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a class="folio-link" href="https://www.linkedin.com/in/mario-alejandro-rebellon-brito-ba109428a/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="folio-link folio-link-quiet" href="mailto:rebellonalejandro6@hotmail.com">Correo <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <ol class="folio-timeline">
+          <li>
+            <span class="folio-timeline-date">Mayo 2026 a hoy</span>
+            <h3>Analista formalizador de medios de pago, Bancoomeva</h3>
+            <p>Automatización del cobro de avances y cuotas de manejo con Python y SQL sobre Databricks, más el proceso de realce de tarjetas. Renovaciones masivas, ajustes de cupos y reportería a franquicias y a la Superfinanciera.</p>
+          </li>
+          <li>
+            <span class="folio-timeline-date">Dic 2023 a ene 2026</span>
+            <h3>Auxiliar de operaciones, Banco de Occidente</h3>
+            <p>Cruce de saldos contra entidades de fomento y centralización de informes del área con Python y ETL. Participación en el proyecto Citizen Developers 2025.</p>
+          </li>
+          <li>
+            <span class="folio-timeline-date">Abr 2022 a nov 2023</span>
+            <h3>Auxiliar de cuadre y conciliación, Banco de Occidente</h3>
+            <p>Conciliación de cuentas contables y validación de las bases de cartera para el formato 414 ante la Superintendencia Financiera.</p>
+          </li>
+          <li>
+            <span class="folio-timeline-date">En curso</span>
+            <h3>Formación</h3>
+            <p>Ingeniería de sistemas (UNAD, séptimo semestre) y Contaduría pública (UNAD, quinto semestre). Técnico en asistencia administrativa, SENA (2019).</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="folio-contact page-wrap" id="contacto" aria-labelledby="contact-title">
+      <div class="folio-section-label"><span>CONTACTO</span><span>Buscando rol junior</span></div>
+      <div class="folio-contact-grid">
+        <div>
+          <h2 id="contact-title">Hablemos<br>de datos.</h2>
+          <p class="folio-intro">Si tienes un proceso que se hace a mano todos los meses, o buscas alguien junior con base financiera para tu equipo de datos, escríbeme.</p>
+        </div>
+        <div class="folio-contact-card">
+          <span class="folio-contact-label">CORREO</span>
+          <a class="folio-contact-mail" href="mailto:rebellonalejandro6@hotmail.com">rebellonalejandro6@hotmail.com</a>
+          <button class="folio-copy" id="copy-mail" type="button" aria-live="polite" data-copy="rebellonalejandro6@hotmail.com">Copiar correo</button>
+          <dl class="folio-case-metrics">
+            <div><dt>Ubicación</dt><dd>Colombia</dd></div>
+            <div><dt>Disponibilidad</dt><dd>Remoto o híbrido</dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/mario-alejandro-rebellon-brito-ba109428a/" target="_blank" rel="noopener">Ver perfil ↗</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="folio-footer page-wrap">
+    <span>Portafolio de Mario Rebellón</span>
+    <span class="folio-footer-note">Última actualización: octubre de 2026</span>
+    <a href="#inicio">Volver arriba ↑</a>
+  </footer>
+</body>
+</html>
