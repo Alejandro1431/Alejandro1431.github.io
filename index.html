@@ -29,7 +29,7 @@
 
   <header class="folio-header">
     <a class="folio-wordmark" href="#inicio" aria-label="Inicio">
-      <span>MARIO REBELLÓN</span><b>/</b><small>DATOS Y AUTOMATIZACIÓN</small>
+      <span>MARIO ALEJANDRO REBELLON</span><b>/</b><small>DATOS Y AUTOMATIZACIÓN</small>
     </a>
     <nav class="folio-nav" id="main-nav" aria-label="Navegación principal">
       <a href="#proyectos">Proyectos</a>
@@ -58,10 +58,6 @@
             <a class="folio-link folio-link-quiet" href="cv/CV-Mario-Rebellon-2026.pdf" target="_blank" rel="noopener">Descargar CV</a>
           </div>
 
-          <ul class="folio-chips" aria-label="Stack principal">
-            <li>Python</li><li>SQL</li><li>DuckDB</li><li>Databricks</li><li>Power BI</li><li>Git</li>
-          </ul>
-
           <dl class="folio-stats">
             <div><dt>Experiencia</dt><dd>4 años en banca</dd></div>
             <div><dt>Ubicación</dt><dd>Colombia</dd></div>
@@ -69,60 +65,22 @@
           </dl>
         </div>
 
-        <aside class="folio-note" aria-label="Flujo de referencia">
-          <div class="folio-note-top"><span>FLUJO DE REFERENCIA</span></div>
+        <aside class="folio-note" aria-label="Salida real del pipeline de movilización financiera">
+          <div class="folio-note-top"><span>PIPELINE DE MOVILIZACIÓN</span><span class="folio-note-state">Salida real</span></div>
 
-          <svg class="folio-flow" viewBox="0 0 520 372" role="img" aria-label="Diagrama: orígenes de datos, orquestación, almacenamiento, transformación y consumo">
-            <g>
-              <g class="flow-node">
-                <rect x="8" y="26" width="160" height="50" rx="2"></rect>
-                <text x="88" y="49">API REST</text>
-                <text class="flow-sub" x="88" y="64">datos abiertos</text>
-              </g>
-              <g class="flow-node">
-                <rect x="180" y="26" width="160" height="50" rx="2"></rect>
-                <text x="260" y="49">EXCEL Y CSV</text>
-                <text class="flow-sub" x="260" y="64">archivos</text>
-              </g>
-              <g class="flow-node">
-                <rect x="352" y="26" width="160" height="50" rx="2"></rect>
-                <text x="432" y="49">SQL</text>
-                <text class="flow-sub" x="432" y="64">Databricks</text>
-              </g>
-            </g>
+          <pre class="folio-term"><span class="folio-term-cmd">$ python -m pipeline perfil</span>
 
-            <g class="flow-wires">
-              <path d="M88 76 V104 H260"></path>
-              <path d="M432 76 V104 H260"></path>
-              <path d="M260 76 V104"></path>
-              <path class="flow-pulse" d="M260 104 V128"></path>
-              <path d="M260 174 V220"></path>
-              <path d="M260 266 V312"></path>
-            </g>
+Bogotá, D.C.      <b>6.445</b> mil millones
+Antioquia         <b>3.787</b> mil millones
+Valle Del Cauca   <b>1.928</b> mil millones
 
-            <g class="flow-node flow-node-wide">
-              <rect x="8" y="128" width="504" height="46" rx="2"></rect>
-              <text x="24" y="147">ORQUESTACIÓN</text>
-              <text class="flow-sub" x="24" y="163">Prefect, dependencias, reintentos</text>
-              <text class="flow-tag" x="496" y="157" text-anchor="end">01</text>
-            </g>
+<b>194.832</b> filas de 3 fuentes
+enero 2009 a septiembre de 2026
 
-            <g class="flow-node flow-node-wide">
-              <rect x="8" y="220" width="504" height="46" rx="2"></rect>
-              <text x="24" y="239">ALMACENAMIENTO</text>
-              <text class="flow-sub" x="24" y="255">Parquet en disco o en S3, DuckDB</text>
-              <text class="flow-tag" x="496" y="249" text-anchor="end">02</text>
-            </g>
+<b>15</b> reglas de calidad y <b>117</b> pruebas
+carga incremental: <b>93%</b> menos transferencia</pre>
 
-            <g class="flow-node flow-node-wide flow-accent">
-              <rect x="8" y="312" width="504" height="46" rx="2"></rect>
-              <text x="24" y="331">TRANSFORMACIÓN Y CONSUMO</text>
-              <text class="flow-sub" x="24" y="347">SQL y dbt, pruebas, Power BI</text>
-              <text class="flow-tag" x="496" y="341" text-anchor="end">03</text>
-            </g>
-          </svg>
-
-          <p class="folio-note-foot">Así paso un dato de la fuente al informe.</p>
+          <p class="folio-note-foot">Es la salida del comando, medida sobre el warehouse. No hay cifras escritas a mano.</p>
         </aside>
       </div>
     </section>

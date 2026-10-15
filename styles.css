@@ -131,12 +131,6 @@ button{font:inherit;color:inherit}
 .folio-link-quiet{border-bottom-color:var(--line)}
 .folio-link-quiet span{color:var(--muted)}
 
-.folio-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:30px}
-.folio-chips li{
-  font:400 9.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;
-  border:1px solid var(--line);padding:5px 9px;color:var(--muted);
-}
-
 .folio-stats{
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;
   width:100%;margin-top:auto;padding-top:26px;border-top:1px solid var(--line-soft);
@@ -159,18 +153,16 @@ button{font:inherit;color:inherit}
 .folio-note-top{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;font:400 9px var(--mono);letter-spacing:.12em;color:var(--muted)}
 .folio-note-foot{position:relative;font:400 10px/1.6 var(--mono);letter-spacing:.06em;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:12px}
 
-/* diagrama de flujo (SVG) */
-.folio-flow{position:relative;width:100%;height:auto;margin:auto 0}
-.flow-node rect{fill:var(--surface-2);stroke:var(--line);stroke-width:1}
-.flow-node text{fill:var(--ink);font:500 11.5px var(--mono);letter-spacing:.06em;text-anchor:middle}
-.flow-node-wide text{text-anchor:start}
-.flow-node .flow-sub{fill:var(--muted);font:400 9.5px var(--mono)}
-.flow-node-wide .flow-tag{fill:var(--line);font:500 11px var(--mono);text-anchor:end}
-.flow-accent rect{stroke:var(--accent)}
-.flow-accent .flow-tag{fill:var(--accent)}
-.flow-wires path{fill:none;stroke:var(--line);stroke-width:1}
-.flow-wires .flow-pulse{stroke:var(--accent);stroke-dasharray:5 16;animation:pulse 2.4s linear infinite}
-@keyframes pulse{to{stroke-dashoffset:-42}}
+/* salida real del pipeline: monoespaciada y con los saltos intactos, para que se
+   lea como lo que es, la consola del proyecto */
+.folio-note-state{color:var(--accent)}
+.folio-term{
+  position:relative;margin:0;overflow-x:auto;
+  font:400 11.5px/1.95 var(--mono);letter-spacing:.01em;color:var(--muted);
+  white-space:pre;
+}
+.folio-term-cmd{color:var(--accent)}
+.folio-term b{font-weight:500}
 
 /* ---------- secciones ---------- */
 .folio-archive,.folio-stack-section,.folio-profile,.folio-contact{
@@ -381,7 +373,7 @@ button{font:inherit;color:inherit}
   .folio-case-flow{font-size:9.5px;padding:12px}
   .folio-contact-card{padding:20px}
   .folio-footer{flex-direction:column;align-items:flex-start;gap:10px}
-  .folio-flow text{font-size:12px}
+  .folio-term{font-size:10.5px;line-height:1.9}
 }
 
 @media(prefers-reduced-motion:reduce){
